@@ -1,11 +1,12 @@
 const express = require('express');
-
+const cors = require('cors')
 const userRouter = require('./users/userRouter');
 const postRouter = require('./posts/postRouter');
 const { logger } = require('./middleware');
 
 const server = express();
 server.use(express.json())
+server.use(cros());
 server.use(logger);
 
 server.get('/', (req, res) => {
