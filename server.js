@@ -6,7 +6,7 @@ const { logger } = require('./middleware');
 
 const server = express();
 server.use(express.json())
-server.use(cros());
+server.use(cors());
 server.use(logger);
 
 server.get('/', (req, res) => {
